@@ -128,6 +128,29 @@ a {
 /* 커스텀 */
 html {
   font-family: 'Pretendard';
+
+  /* 스크롤바 커스텀 시작 */
+
+
+body::-webkit-scrollbar {
+  width: 3px;
+  height: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 15%;
+  background: #000;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+.swiper-horizontal {
+  touch-action: auto;
+}
+/* 스크롤바 커스텀 끝 */
+}
 }
 
  /* <!-- 상단바 시작 --> */
