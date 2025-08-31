@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OY</title>
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,200&display=swap" rel="stylesheet">
 
+    <!-- 스와이퍼 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css" />
     <script src="/script.js" defer></script>
   </head>
@@ -105,14 +110,14 @@
             <img src="./images/sec-3_img1.png" alt="">
           </div>
 
-          <div class="sec-3_img-text-wrap">
-            <div class="sec-3_img-text-box">
+          <div class="sec-3_img-text-wrap flex">
+            <div class="sec-3_img-text-box flex">
               <div class="sec-3_img-text-item sec-3_img-text-item-1">
                 <span>2023 COLLECTION <br> S/S F/W</span>
               </div>
-              <div class="sec-3_img-text-title-box">
+              <div class="sec-3_img-text-title-box flex">
                 <span>SEASEN OFF</span>
-                <div class="sec-3_img-text-title">
+                <div class="sec-3_img-text-title flex">
                   <span>Limited Quantity <br> Seasonal Clearance Sale</span>
                   <img src="./images/sec-3_img-title.png" alt="">
                 </div>
@@ -126,6 +131,20 @@
 
         <div class="sec-3_img sec-3_img2 img-box">
           <img src="./images/sec-3_img2-1.png" alt="">
+        </div>
+
+        <div class="sec-3_img2-silde-box mySwiper swiper">
+          <div class="swiper-wrapper">
+            <div class="silde-img swiper-slide">
+              <img src="./images/sec-3_img2.png" alt="">
+            </div>
+            <div class="silde-img swiper-slide">
+              <img src="./images/sec-3_img3.png" alt="">
+            </div>
+            <div class="silde-img swiper-slide">
+              <img src="./images/sec-3_img4.png" alt="">
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -321,16 +321,69 @@ justify-content: start;
     position: relative;
   }
 
-
   .sec-3_img-warp {
     justify-content: center;
     
   }
+  
+  .sec-3_img1 {
+    position: relative;
+  }
 
   .sec-3_img-text-wrap {
+    flex-direction: column;
     position: absolute;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 52px;
+    gap: 350px;
+    width: 856px;
   }
-  
+
+  .sec-3_img-text-wrap .sec-3_img-text-box {
+    flex-direction: column;
+    gap: 350px;
+  }
+
+  .sec-3_img-text-wrap .sec-3_img-text-box .sec-3_img-text-title-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .sec-3_img-text-wrap .sec-3_img-text-box .sec-3_img-text-title-box span {
+    font-size: 48px;
+    font-weight: 700;
+    margin-right: 230px;
+  }
+
+  .sec-3_img-text-wrap .sec-3_img-text-title-box .sec-3_img-text-title {
+    gap: 12px;
+    align-items: center;
+  }
+
+  .sec-3_img-text-wrap .sec-3_img-text-title-box .sec-3_img-text-title span {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: right;
+    margin: 0;
+  }
+  .sec-3_img-text-item-1 {
+    text-align: right;
+  }
+
+  /* 오른쪽 이미지 silde */
+  .sec-3_img2 {
+    position: relative;
+  }
+
+  .sec-3_img2-silde-box {
+    position: absolute;
+    top: 186PX;
+    left: 50%;
+    transform: translateX(50%);
+  }
  /* <!-- sec-3 끝 --> */
 
  /* <!-- sec-4 시작 --> */
