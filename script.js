@@ -1,11 +1,4 @@
 // sec-3 스와이퍼
-const thumbs = [
-  './images/thumb_1.png',
-  './images/thumb_2.png',
-  './images/thumb_3.png',
-];
-
-
   var swiper = new Swiper(".mySwiper", {
     effect: "cube",
     grabCursor: true,
