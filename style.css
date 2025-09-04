@@ -375,18 +375,124 @@ justify-content: start;
 
   /* 오른쪽 이미지 silde */
   .sec-3_img2 {
+    width: 960px;
+    height: 950px;
     position: relative;
+    overflow: hidden;
   }
 
-  .sec-3_img2-silde-box {
-    position: absolute;
-    top: 186PX;
-    left: 50%;
-    transform: translateX(50%);
+  .sec-3_img2 .slide-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 스와이프 제어 */
+.mySwiper .swiper-pagination-bullet {
+  background: none !important;  /* 기본 배경 제거 */
+  width: auto !important;       /* 기본 크기 제거 */
+  height: auto !important;
+  opacity: 1 !important;        /* 투명도 초기화 */
+  margin: 0 6px;                /* 간격은 필요에 맞게 */
+}
+
+.mySwiper .swiper-pagination-bullet svg {
+  width: 12px;
+  height: 11px;
+  display: block;
+  fill: currentColor;
+}
+
+.mySwiper .swiper-pagination-bullet svg path {
+  fill: currentColor !important; /* 하드코딩 fill 덮어쓰기 */
+}
+
+  .mySwiper .swiper-pagination-bullet {
+    color: #565656; /* 비활성 회색 */
+  }
+  
+  .mySwiper .swiper-pagination-bullet-active {
+    color: #E9E9E9; /* 활성 흰색 */
+  }
+
+  .mySwiper .swiper-pagination {
+    bottom: 130px;
   }
  /* <!-- sec-3 끝 --> */
 
  /* <!-- sec-4 시작 --> */
+.sec-4 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.sec-4_text-box {
+  margin-top: 200px;
+  flex-direction: column;
+  gap: 400px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 590px;
+  pointer-events: none;
+}
+
+.sec-4_text-box .cont_btn-box {
+  gap: 152px;
+  margin-left: 525px;
+}
+
+.sec-4_text-box .cont_btn-box .cont_btn {
+  position: relative;
+  font-size: 32px;
+  font-weight: 400;
+  color: #fff;
+  pointer-events: visible;
+}
+.sec-4_text-box .cont_btn-box .cont_btn:hover::after {
+  position: absolute;
+  content: "";
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+ .cont-box {
+  position: relative;
+  width: calc(100% - 0px);
+  height: calc(100% - 0px);
+  box-sizing: border-box;
+ }
+
+ .cont-box .cont::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 0px);
+  height: calc(100% - 0px);
+  background-color: rgba(0, 0, 0, .5);
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+ }
+
+ .cont {
+  width:  480px;
+  position: relative;
+  transition-property: transform, opacity, width;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+ }
+
+ .cont:hover {
+  width: 40%;
+ }
+
+ .cont:hover::before {
+  opacity: 0;
+ }
  /* <!-- sec-4 끝 --> */
 
  /* <!-- sec-5 시작 --> */
