@@ -1,0 +1,23 @@
+<svg style="position:absolute;width:0;height:0">
+  <filter id="glass-distortion-2" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox">
+    <!-- 1) 굴절용 노이즈 맵 -->
+    <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="1" seed="9" result="noise"/>
+    <feGaussianBlur in="noise" stdDeviation="6" result="softMap"/>
+    <!-- 2) 스펙큘러(하이라이트 림) -->
+    <feSpecularLighting in="softMap" surfaceScale="4" specularConstant="0.9" specularExponent="90" lighting-color="white" result="spec">
+      <fePointLight x="-180" y="-180" z="320"/>
+    </feSpecularLighting>
+    <!-- 3) 소스 굴절 -->
+    <feDisplacementMap in="SourceGraphic" in2="softMap" scale="110" xChannelSelector="R" yChannelSelector="G" result="refracted"/>
+    <!-- 4) 컬러 분리 살짝 (채널 감마/오프셋 미세 차이) -->
+
+    <!-- 5) 안쪽 그을림(바니에트) -->
+    <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blurA"/>
+    <!-- arithmetic: k3*in2 + k2*in + k1 + k4*in*in2  (여기선 in=SourceGraphic, in2=blurA) -->
+    <feComposite in="refractedColor" in2="blurA" operator="arithmetic" k2="1" k3="-0.55" result="innerShade"/>
+    <!-- 6) 하이라이트 합성 -->
+    <feBlend in="innerShade" in2="spec" mode="screen" result="lit"/>
+    <!-- 7) 최종 -->
+    <feComposite in="lit" in2="SourceAlpha" operator="in" />
+  </filter>
+</svg>

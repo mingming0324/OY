@@ -70,6 +70,12 @@
     "wdth" 100;
 }
 
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* 노말라이즈 */
 body,
 ul,
@@ -107,6 +113,10 @@ a {
 
 .flex {
   display: flex;
+}
+
+.flex-d {
+  flex-direction: column;
 }
 
 .grid {
@@ -423,6 +433,7 @@ justify-content: start;
 .sec-4 {
   position: relative;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .sec-4_text-box {
@@ -480,6 +491,7 @@ justify-content: start;
 
  .cont {
   width:  480px;
+  flex-shrink: 0;
   position: relative;
   transition-property: transform, opacity, width;
   transition-timing-function: ease-in-out;
@@ -487,7 +499,7 @@ justify-content: start;
  }
 
  .cont:hover {
-  width: 40%;
+  transform: scale(1.1);
  }
 
  .cont:hover::before {
@@ -496,9 +508,167 @@ justify-content: start;
  /* <!-- sec-4 끝 --> */
 
  /* <!-- sec-5 시작 --> */
+ .sec-5 {
+  background-color: #000;
+  background-image: url(./images/sec-5_back-img.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+ }
+
+ .sec-5_wrap {
+  padding: 198px 0;
+  box-sizing: border-box;
+ }
+ .sec-5_wrap .sec-5_text-box {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 110px;
+ }
+ .sec-5_wrap .sec-5_text-box .sec-5_btn-box {
+  cursor: pointer;
+  
+ }
+ .sec-5_wrap .sec-5_text-box .sec-5_btn-box span {
+  font-size: 40px;
+  font-weight: 400;
+  color: #f3f3f3;
+  font-family: "Bebas Neue";  
+  padding: 22px 142px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, .3);
+  
+ }
+
+ .sec-5_wrap .sec-5_ring-box {
+  position: absolute;
+  top: 140px;
+  left: 230px;
+  align-items: center;
+ }
+
+ .sec-5_wrap .sec-5_ring-box .ring-2 {
+  margin-bottom: 50px;
+  margin-left: 10px;
+ }
+
+ .sec-5_wrap .sec-5_ring-box .sec-5_ring {
+  gap: 1006px;
+ }
+
+ /* .glass_sec-5-1 {
+  width: 200px;
+  height: 200px;
+  bottom: 2170px;
+  left: 130px;
+ }
+
+ .glass_sec-5-2 {
+  width: 550px;
+  height: 550px;
+  left: 1600px;
+  top: 1600px;
+ }
+
+.glass_sec-5-3 {
+  width: 450px;
+  height: 450px;
+  bottom: 720px;
+  left: -200px;
+} */
+
+
+
  /* <!-- sec-5 끝 --> */
 
  /* <!-- sec-6 시작 --> */
+ .sec-6 {
+  background-color: #000;
+  padding: 84px 62px;
+  box-sizing: border-box;
+ }
+
+ .sec-6_img-wrap {
+  gap: 80px;
+ }
+
+ .sec-6_img-box-1 {
+  position: relative;
+ }
+
+ .sec-6_img-box .sec-6_text-box {
+  position: absolute;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  color: #fff;
+  white-space: nowrap;
+  gap: 107px;
+ }
+
+  .sec-6_img-box .sec-6_text-box-1 {
+    top: 32px;
+ }
+
+ .sec-6_img-box .sec-6_text-box .sec-6_text-1 {
+  text-align: right;
+  gap: 274px;
+  margin-bottom: calc(578px - 107px);
+ }
+
+ .sec-6_img-box .sec-6_text-box .sec-6_text .₩ {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+ }
+
+ .sec-6_img-box .sec-6_text-box .sec-6_text .WASHED {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 28px;
+ }
+
+ .sec-6_img-box .sec-6_text-box .sec-6_text-2 .sec-6_btn {
+  font-size: 24px;
+  color: #f3f3f3;
+  font-family: "Bebas Neue";  
+  padding: 18px 107px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(var(3px));
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 50px;
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.15), 
+  0 -10px 20px -5px rgba(0,0,0,0.3) 
+  inset, 0 150px 100px -80px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+ .sec-6_img-box .sec-6_text-box .sec-6_text-3 {
+  gap: 420px;
+  font-size: 16px;
+  font-weight: 300;
+ }
+
+ .sec-6_img-box .sec-6_text-box .sec-6_text-3 span {
+  font-weight: 700;
+  margin-right: 8px;
+ }
+
+.sec-6_img-box-2 {
+  position: relative;
+}
+
+.sec-6_img-box .sec-6_text-box-2 {
+  position: absolute;
+  bottom: 32px;
+ }
+
+ .sec-6_img-box .sec-6_text-box-2  .sec-6_text-2 {
+  gap: 228px;
+ }
  /* <!-- sec-6 끝 --> */
 
  /* <!-- footer 시작 --> */
