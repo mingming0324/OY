@@ -666,8 +666,26 @@ justify-content: start;
   bottom: 32px;
  }
 
+ .sec-6_img-box .sec-6_text-box-3 {
+  position: absolute;
+  bottom: 32px;
+ }
+
+ .sec-6_img-box .sec-6_text-box-4 {
+  position: absolute;
+  bottom: 32px;
+ }
+
  .sec-6_img-box .sec-6_text-box-2  .sec-6_text-2 {
   gap: 228px;
+ }
+
+ .sec-6_img-box .sec-6_text-box-3  .sec-6_text-3 {
+  gap: 350px;
+ }
+
+ .sec-6_img-box .sec-6_text-box-4  .sec-6_text-4 {
+  gap: 348px;
  }
  /* <!-- sec-6 끝 --> */
 

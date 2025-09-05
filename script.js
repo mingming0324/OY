@@ -22,3 +22,11 @@
         },
       },
   });
+
+// sec-6 스와이퍼 
+var swiper = new Swiper(".mySwiper-2", {
+  watchSlidesProgress: true,
+  slidesPerView: 2,
+  loop: true,
+  spaceBetween: 78,
+});
