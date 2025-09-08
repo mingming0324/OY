@@ -186,21 +186,67 @@ body::-webkit-scrollbar-track {
   box-sizing: border-box;
 }
 
+.glass {
+  z-index: 100;
+  width: 714px;
+  height: 714px;
+  position: absolute;
+  border-radius: 500px;
+  background: rgba(255, 255, 255, 0.11);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: url(#distortion);
+  backdrop-filter: url(#distortion);
+border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/*  심한 블러
+glass {
+  position: absolute;
+  width: 714px;
+  height: 714px;
+  border-radius: 500px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.2) 0%,
+  rgba(255, 255, 255, 0.08) 50%,
+  rgba(255, 255, 255, 0.03) 100%
+);
+  backdrop-filter: url(#glass);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+} */
+
+.glass-1 {
+  top: 0;
+  right: -50px;
+}
+
+.glass-2 {
+  bottom: -150px;
+  left: -200px;
+}
+
 .main-wrap {
   margin-top: 280px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
-
 }
 
 .main_line {
-  width: 3260px;
   height: 175px;
   background-color: #000;
 justify-content: start;
   align-items: center;
+  overflow: visible; 
+}
+
+.marquee {
+  width: max-content;
+  will-change: transform;
 }
 
 .main_line-1 {
@@ -210,16 +256,37 @@ justify-content: start;
   transform: rotate(10deg);
 }
 
+.main_line-1 .marquee {
+  animation: marquee-left 100s linear infinite;
+}
+
 .main_line-2 {
   position: absolute;
   left: 50%;
+  top: -30%;
   transform: rotate(-11deg) translateX(-50%);
+}
+
+.main_line-2 .marquee {
+  animation: marquee-right 100s linear infinite;
 }
 
 .main_line-text-box  {
   align-items: center;
   color: #fff;
   white-space: nowrap;
+  flex: 0 0 auto;     
+  min-width: 120vw;
+}
+
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@keyframes marquee-right {
+  0%   { transform: translateX(-33.333%); }
+  100% { transform: translateX(0); }
 }
 
 .main_line-text-box .logo {
@@ -329,7 +396,7 @@ justify-content: start;
 
 .sec2-text-box p {
   background: linear-gradient(to right, #fff, #fff) no-repeat;
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;  
   background-size: 0% 100%;
 }
