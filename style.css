@@ -133,12 +133,22 @@ a {
   width: 100%;
   display: block;
 }
+
+.time_wrap {
+  overflow: hidden;
+}
+
+.create_01 {
+  transform: translateY(100%);
+  opacity: 0;
+}
  /* 라이브러리 끝 */
 
 /* 커스텀 */
 html {
   font-family: 'Pretendard';
 
+  
   /* 스크롤바 커스텀 시작 */
 
 
@@ -161,6 +171,8 @@ body::-webkit-scrollbar-track {
 }
 /* 스크롤바 커스텀 끝 */
 }
+
+
 
 
  /* <!-- 상단바 시작 --> */
@@ -329,6 +341,7 @@ justify-content: start;
  /* <!-- sec-3 시작 --> */
   .sec-3 {
     position: relative;
+    background-color: #000;
   }
 
   .sec-3_img-warp {

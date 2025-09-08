@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 // sec-3 스와이퍼
   var swiper = new Swiper(".mySwiper", {
     effect: "cube",
@@ -21,6 +23,25 @@
             </span>`;
         },
       },
+  });
+
+  let tl_1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sec-3",       
+      start: "top 60%",      
+      toggleActions: "play none none none" ,     
+      markers: true 
+    },
+    
+    defaults: {
+      ease: "power4.out" 
+    }
+  });
+
+  tl_1.to(".create_01", {
+    y: '0%',
+    duration: 1.5,
+    opacity: 1,
   });
 
 // sec-6 스와이퍼 
