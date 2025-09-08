@@ -61,10 +61,10 @@
   font-display: swap;
 }
 
-.roboto-200-italic {
+.roboto-100-italic {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-weight: 100;
   font-style: italic;
   font-variation-settings:
     "wdth" 100;
@@ -171,9 +171,6 @@ body::-webkit-scrollbar-track {
 }
 /* 스크롤바 커스텀 끝 */
 }
-
-
-
 
  /* <!-- 상단바 시작 --> */
 .top-bar {
@@ -318,6 +315,7 @@ justify-content: start;
   background-color: #000;
   padding: 74px 28px;
   box-sizing: border-box;
+  background-image: url(./images/sec-2_back-img.png);
 }
 
 .sec2-text-box {
@@ -329,12 +327,20 @@ justify-content: start;
   text-align: justify;
 }
 
+.sec2-text-box p {
+  background: linear-gradient(to right, #fff, #fff) no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;  
+  background-size: 0% 100%;
+}
+
 .sec2-text-box1 {
   margin-bottom: 38px;
 }
 
 .sec2-text-box2 span {
   font-family: "Roboto", sans-serif;
+  letter-spacing: -5px;
 }
  /* <!-- sec-2 끝 --> */
 
@@ -601,6 +607,7 @@ justify-content: start;
   background-color: #000;
   padding: 84px 62px;
   box-sizing: border-box;
+  overflow: hidden;
  }
 
  .sec-6_img-wrap {

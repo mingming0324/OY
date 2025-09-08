@@ -1,5 +1,24 @@
 gsap.registerPlugin(ScrollTrigger);
 
+let tl_2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sec-2",       
+    start: "top 60%",      
+    scrub: true,
+    // markers: true 
+  },
+  
+  defaults: {
+    ease: "power4.out" 
+  }
+});
+
+tl_2.to(".sec2-text-box p", {
+  backgroundSize: '100% 100%',
+
+});
+
+
 // sec-3 스와이퍼
   var swiper = new Swiper(".mySwiper", {
     effect: "cube",
@@ -30,7 +49,7 @@ gsap.registerPlugin(ScrollTrigger);
       trigger: ".sec-3",       
       start: "top 60%",      
       toggleActions: "play none none none" ,     
-      markers: true 
+      // markers: true 
     },
     
     defaults: {
