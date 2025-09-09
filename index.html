@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OY</title>
     <!-- 제이쿼리 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
      <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- GSAP-SCROLL -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <!-- 마우스 따라가기 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,15 +82,15 @@
           </div>
 
         </div>
-        <div class="glass glass-1">
+        <div class="glass glass-1" data-mousemove-effect1-hor-res="0.05" data-mousemove-effect1-ver-res="0.05">
         </div>
-        <div class="glass glass-2">
+        <div class="glass glass-2" data-mousemove-effect1-hor-res="-0.05" data-mousemove-effect1-ver-res="-0.05" >
         </div>
 
 
         <svg style="display:none;">
           <filter id="distortion">
-            <feTurbulence type="turbulence" baseFrequency="0.01 0.1" numOctaves="1" result="turbulence"/>
+            <feTurbulence type="turbulence" baseFrequency="0.11 0.1" numOctaves="3" result="turbulence"/>
             <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="8" xChannelSelector="R" yChannelSelector="G"/>
           </filter>
         </svg>
@@ -310,13 +312,13 @@
     <!-- sec-5 시작 -->
     <section class="sec-5 con">
       
-      <div class="liquidGlass-wrapper glass_sec-5-2">
-        <div class="liquidGlass-effect"></div>
-        <div class="liquidGlass-tint"></div>
-        <div class="liquidGlass-shine"></div>
-        </div>
+
       <div class="sec-5_wrap">
-        
+        <div class="glass sec-5_glass-1 sec-5_glass"></div>
+        <div class="glass sec-5_glass-2 sec-5_glass"></div>
+        <div class="glass sec-5_glass-3 sec-5_glass"></div>
+
+
         <div class="sec-5_text-box flex">
           <div class="sec-5_text-img flex">
             <img src="./images/sec-5_text-img.png" alt="">
@@ -325,6 +327,10 @@
             <span><a href="#">LEAD MORE</a></span>
           </div>
         </div>
+
+        <div class="glass ring_glass-1 ring_glass" data-mousemove-effect1-hor-res="0.05" data-mousemove-effect1-ver-res="0.05"></div>
+        <div class="glass ring_glass-2 ring_glass" data-mousemove-effect1-hor-res="-0.05" data-mousemove-effect1-ver-res="-0.05"></div>
+        <div class="glass ring_glass-3 ring_glass" data-mousemove-effect1-hor-res="0.05" data-mousemove-effect1-ver-res="0.05"></div>
 
         <div class="sec-5_ring-box flex">
           <div class="ring ring-2">
@@ -351,7 +357,13 @@
       <div class="sec-6_img-wrap swiper-2 mySwiper-2">
         <div class="swiper-wrapper">
           <div class="sec-6_img-box sec-6_img-box-1 swiper-slide">
-            <div class="sec-6_text-box sec-6_text-box-1 flex">
+            <div class="sec-6_text-box sec-6_text-box-1-1 sec-6_text-box--preview">
+              <div class="sec-6_text sec-6_text-1-1 flex">
+                <span class="WASHED">WASHED LEATHER EARS HOODED JACKET - BLACK</span>
+                <span class="₩">₩ 160,800</span>
+              </div>
+            </div>
+            <div class="sec-6_text-box sec-6_text-box-1 sec-6_text-box--detail flex">
               <div class="sec-6_text sec-6_text-1 flex">
                 <span class="₩">₩ 160,800</span>
                 <span class="WASHED">
@@ -374,17 +386,40 @@
   
               </div>
             </div>
+            
             <div class="img-box">
               <img src="./images/sec-6_img1.png" alt="">
             </div>
-            
           </div>
   
           <div class="sec-6_img-box sec-6_img-box-2 swiper-slide">
-            <div class="sec-6_text-box sec-6_text-box-2">
+            <div class="sec-6_text-box sec-6_text-box-2 sec-6_text-box--preview">
               <div class="sec-6_text sec-6_text-2 flex">
                 <span class="WASHED">MODULAR PANEL LIGHT SHELL JACKET - BLACK</span>
                 <span class="₩">₩ 97,300</span>
+              </div>
+            </div>
+            <div class="sec-6_text-box sec-6_text-box-1 sec-6_text-box--detail flex">
+              <div class="sec-6_text sec-6_text-1 flex">
+                <span class="₩">₩ 97,300</span>
+                <span class="WASHED">
+                  MODULAR PANEL LIGHT SHELL JACKET <br>
+                  - BLACK</span>
+              </div>
+              <div class="sec-6_text sec-6_text-2 flex">
+                <span class="sec-6_btn">
+                  <a href="#">LEAD MORE</a>
+                </span>
+              </div>
+              <div class="sec-6_text sec-6_text-3 flex">
+                <div class="span-box">
+                  <span >FILLER </span>POLYESTER 100%
+                </div>
+                <div class="span-box">
+                  <span>LINING </span>POLYESTER 100%
+                </div>
+  
+  
               </div>
             </div>
             <div class="img-box">
@@ -394,12 +429,37 @@
           </div>
   
           <div class="sec-6_img-box sec-6_img-box-3 swiper-slide">
-            <div class="sec-6_text-box sec-6_text-box-3">
+            <div class="sec-6_text-box sec-6_text-box-3 sec-6_text-box--preview">
               <div class="sec-6_text sec-6_text-3 flex">
                 <span class="WASHED">HAIRY STRIPE KNIT CARDIGAN - RED</span>
                 <span class="₩">₩ 103,550</span>
               </div>
             </div>
+
+            <div class="sec-6_text-box sec-6_text-box-1 sec-6_text-box--detail flex">
+              <div class="sec-6_text sec-6_text-1 flex">
+                <span class="₩">₩ 103,550</span>
+                <span class="WASHED">
+                  HAIRY STRIPE KNIT CARDIGAN <br>
+                  - RED</span>
+              </div>
+              <div class="sec-6_text sec-6_text-2 flex">
+                <span class="sec-6_btn">
+                  <a href="#">LEAD MORE</a>
+                </span>
+              </div>
+              <div class="sec-6_text sec-6_text-3 flex">
+                <div class="span-box">
+                  <span >FILLER </span>POLYESTER 70%
+                </div>
+                <div class="span-box">
+                  <span>LINING </span>POLYESTER 100%
+                </div>
+  
+  
+              </div>
+            </div>
+
             <div class="img-box">
               <img src="./images/sec-6_img3.png" alt="">
             </div>
@@ -407,12 +467,37 @@
           </div>
   
           <div class="sec-6_img-box sec-6_img-box-4 swiper-slide">
-            <div class="sec-6_text-box sec-6_text-box-4">
+            <div class="sec-6_text-box sec-6_text-box-4 sec-6_text-box--preview">
               <div class="sec-6_text sec-6_text-4 flex">
                 <span class="WASHED">STUD WIDE VOLUME PANTS - BLACK</span>
                 <span class="₩">₩ 122,550</span>
               </div>
             </div>
+
+            <div class="sec-6_text-box sec-6_text-box-1 sec-6_text-box--detail flex">
+              <div class="sec-6_text sec-6_text-1 flex">
+                <span class="₩">₩ 122,550</span>
+                <span class="WASHED">
+                  STUD WIDE VOLUME PANTS <br>
+                  - BLACK</span>
+              </div>
+              <div class="sec-6_text sec-6_text-2 flex">
+                <span class="sec-6_btn">
+                  <a href="#">LEAD MORE</a>
+                </span>
+              </div>
+              <div class="sec-6_text sec-6_text-3 flex">
+                <div class="span-box">
+                  <span >FILLER </span>COTTON 100%
+                </div>
+                <div class="span-box">
+                  <span>LINING </span>POLYESTER 100%
+                </div>
+  
+  
+              </div>
+            </div>
+            
             <div class="img-box">
               <img src="./images/sec-6_img4.png" alt="">
             </div>
