@@ -166,6 +166,24 @@ let tl_2 = gsap.timeline({
   });
 
 
+//sec-5 글자 애니메이션
+let tl_3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sec-5",       
+    start: "top 60%",      
+    toggleActions: "play none none none" ,     
+    // markers: true 
+  },
+  
+  defaults: {
+    ease: "power4.out" 
+  }
+});
+
+tl_3.to(".sec-5_mask", {
+  backgroundSize: "100% 100%",  // 위에서 아래로 채워짐
+  duration: 2
+});
 
 // sec-6 스와이퍼 
 var swiper = new Swiper(".mySwiper-2", {
