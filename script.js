@@ -93,7 +93,9 @@ let tl_2 = gsap.timeline({
 let tl_3 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sec-5",       
-    start: "top 60%",      
+    start: "top 80%",
+    end: "bottom 80%",
+    scrub: 0.5, 
     toggleActions: "play none none none" ,     
     // markers: true 
   },
@@ -105,7 +107,7 @@ let tl_3 = gsap.timeline({
 
 tl_3.to(".sec-5_mask", {
   backgroundSize: "100% 100%",  // 위에서 아래로 채워짐
-  duration: 2
+  ease: "none"
 });
 
 // sec-6 스와이퍼 
