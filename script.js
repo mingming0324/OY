@@ -23,84 +23,7 @@ breathe(".glass-2");
 //   .to(".glass-1", { duration: 7, x: -600, y: -120 }, 0)
 //   .to(".glass-2", { duration: 7, x: 520, y: 110 }, 0);
 
-//sec-1 마우스 오버 따라가기
-// function MousemoveEffect1__start() {
-//   const $window = $(window);
 
-//   let windowWidth = $window.width();
-//   let windowHeight = $window.height();
-
-//   $window.resize(_.throttle(function () {
-//     windowWidth = $window.width();
-//     windowHeight = $window.height();
-//   }, 100));
-
-//   $window.resize(_.throttle(function () {
-//     MousemoveEffect1__update();
-//   }, 100));
-
-//   let MousemoveEffect1__$el = null;
-//   let MousemoveEffect1__lastPosX = 0;
-//   let MousemoveEffect1__lastPosY = 0;
-
-//   function MousemoveEffect1__update() {
-//     MousemoveEffect1__$el.each(function (index, node) {
-//       const $node = $(node);
-//       const horRes = $node.data('data-mousemove-effect1-hor-res');
-//       const verRes = $node.data('data-mousemove-effect1-ver-res');
-
-//       const x = (MousemoveEffect1__lastPosX - (windowWidth / 2)) * horRes;
-//       const y = (MousemoveEffect1__lastPosY - (windowHeight / 2)) * verRes;
-//       $(node).css('transform', 'translateX(' + x + 'px) translateY(' + y + 'px)');
-
-//       console.log("MousemoveEffect1__lastPosX : " + MousemoveEffect1__lastPosX);
-//       console.log("MousemoveEffect1__lastPosY : " + MousemoveEffect1__lastPosY);
-//     });
-//   }
-//   console.log(
-//     $('.glass').map((i,el)=>[
-//       $(el).data('data-mousemove-effect1-hor-res'),
-//       $(el).data('data-mousemove-effect1-ver-res')
-//     ]).get()
-//   );
-
-//   function MousemoveEffect1__init() {
-//     MousemoveEffect1__$el = $('.glass');
-
-//     MousemoveEffect1__$el.each(function (index, node) {
-//       const $node = $(node);
-//       $node.data('data-mousemove-effect1-hor-res', $node.attr('data-mousemove-effect1-hor-res') * 1);
-//       $node.data('data-mousemove-effect1-ver-res', $node.attr('data-mousemove-effect1-ver-res') * 1);
-//     });
-
-//     const MousemoveEffect1__updateThrottled = _.throttle(function () {
-//       MousemoveEffect1__update();
-//     }, 10);
-
-//     $window.mousemove(function (e) {
-//       MousemoveEffect1__lastPosX = e.clientX;
-//       MousemoveEffect1__lastPosY = e.clientY;
-
-//       MousemoveEffect1__updateThrottled();
-//     });
-//   }
-  
-//   MousemoveEffect1__init();
-// }
-
-// MousemoveEffect1__start();
-
-// -sec-1 유리-심한 블러버전
-// const feImage = document.querySelector("feImage");
-// fetch("https://essykings.github.io/JavaScript/map.png")
-//   .then((response) => {
-//     return response.blob();
-//   })
-//   .then((blob) => {
-//     const objURL = URL.createObjectURL(blob);
-
-//     feImage.setAttribute("href", objURL);
-//   });
 
 // sec-2 스크롤 시 글자 채워지기
 let tl_2 = gsap.timeline({
@@ -206,3 +129,70 @@ $(document)
 //   let $this = $(this);
 //   $this.removeClass("is-hover") 
 // });
+
+// sec-7 마우스오버
+function MousemoveEffect1__start() {
+  const $window = $(window);
+
+  let windowWidth = $window.width();
+  let windowHeight = $window.height();
+
+  $window.resize(_.throttle(function () {
+    windowWidth = $window.width();
+    windowHeight = $window.height();
+  }, 100));
+
+  $window.resize(_.throttle(function () {
+    MousemoveEffect1__update();
+  }, 100));
+
+  let MousemoveEffect1__$el = null;
+  let MousemoveEffect1__lastPosX = 0;
+  let MousemoveEffect1__lastPosY = 0;
+
+  function MousemoveEffect1__update() {
+    MousemoveEffect1__$el.each(function (index, node) {
+      const $node = $(node);
+      const horRes = $node.data('data-mousemove-effect1-hor-res');
+      const verRes = $node.data('data-mousemove-effect1-ver-res');
+
+      const x = (MousemoveEffect1__lastPosX - (windowWidth / 2)) * horRes;
+      const y = (MousemoveEffect1__lastPosY - (windowHeight / 2)) * verRes;
+      $(node).css('transform', 'translateX(' + x + 'px) translateY(' + y + 'px)');
+
+      console.log("MousemoveEffect1__lastPosX : " + MousemoveEffect1__lastPosX);
+      console.log("MousemoveEffect1__lastPosY : " + MousemoveEffect1__lastPosY);
+    });
+  }
+  console.log(
+    $('.move-text_img').map((i,el)=>[
+      $(el).data('data-mousemove-effect1-hor-res'),
+      $(el).data('data-mousemove-effect1-ver-res')
+    ]).get()
+  );
+
+  function MousemoveEffect1__init() {
+    MousemoveEffect1__$el = $('.move-text_img');
+
+    MousemoveEffect1__$el.each(function (index, node) {
+      const $node = $(node);
+      $node.data('data-mousemove-effect1-hor-res', $node.attr('data-mousemove-effect1-hor-res') * 1);
+      $node.data('data-mousemove-effect1-ver-res', $node.attr('data-mousemove-effect1-ver-res') * 1);
+    });
+
+    const MousemoveEffect1__updateThrottled = _.throttle(function () {
+      MousemoveEffect1__update();
+    }, 10);
+
+    $window.mousemove(function (e) {
+      MousemoveEffect1__lastPosX = e.clientX;
+      MousemoveEffect1__lastPosY = e.clientY;
+
+      MousemoveEffect1__updateThrottled();
+    });
+  }
+  
+  MousemoveEffect1__init();
+}
+
+MousemoveEffect1__start();

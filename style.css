@@ -231,7 +231,7 @@ glass {
 }
 
 .main-wrap {
-  margin-top: 280px;
+  margin-top: 200px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -885,9 +885,22 @@ transition: all  .3s;
  /* <!-- sec-6 끝 --> */
 
   /* <!-- sec-7 시작 --> */
+
+  .sec-7 {
+    position: relative;
+  }
+
+
+  .move-text_img {
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    will-change: transform;
+  }
  /* <!-- sec-7끝 --> */
+
  /* <!-- footer 시작 --> */
- #footer {
+  #footer {
   box-sizing: border-box;
   padding: 126px 321px 186px;
   background-color: #000;
