@@ -198,3 +198,33 @@ function MousemoveEffect1__start() {
 }
 
 MousemoveEffect1__start();
+
+
+// footer
+
+let tl_4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".ft-bar",       
+    start: "top 80%",
+    toggleActions: "play none none none" ,     
+    // markers: true 
+  },
+  
+  defaults: {
+    ease: "power4.out" 
+  }
+});
+
+tl_4.to(".ft-text-box", {
+  y: '0%',
+  duration: 6,
+});
+
+gsap.to(".ft-text-box", {
+	repeat: -1,
+	yoyo: true,
+	duration: 2,
+	skewX: 1.5,
+	// skewY: .5,
+	ease: "sine.inOut"
+});
