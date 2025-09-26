@@ -930,12 +930,39 @@ transition: all  .3s;
   transform: translateX(-50%);
 }
 
-  .ft-wrap  .ft-text-box {
+  .ft-wrap .ft-text-box {
   width: 968px;
   height: 1096px;
   background-color: #fff;
   padding: 42px 88px;
   box-sizing: border-box;
+  flex-direction: column;
+}
 
+.ft-wrap .ft-text-box .ft-title {
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.ft-wrap .ft-text-box .ft-menu {
+  gap: 22px;
+  margin-bottom: 14px;
+}
+
+.ft-wrap .ft-text-box .ft-item {
+  font-size: 50px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.ft-line {
+  margin: 24px 0;
+}
+
+.ft-wrap .ft-text-box .ft-text_box {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 75px;
 }
  /* <!-- footer 끝 --> */
